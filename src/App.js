@@ -10,11 +10,16 @@ function App() {
   }
   return (
     <div className="App">
+      {/* label for the page*/}
       <p><label for="file"> Take Image </label></p>
       {/* <input accept='image/*' id="icon-button-file" type="file"
-        capture="environment" /> */}
+        capture="environment" /> */} 
+        {/* This is the original method commented out */}
+        
+        {/*output element for the image uploaded*/} 
         <p><img id="output" width="200"/></p>
-        <input type="file" accept='image/*' name='image' id='file' onChange={loadFile} style="display: none;"></input>
+
+        <input type="file" accept='image/*' name='image' id='file' onChange={loadFile} />
     </div>
   );
 }
