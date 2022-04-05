@@ -1,12 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import camera from './camera.js';
+
 
 function App() {
+
+  camera.startCamera();
+
   return (
     <div className="App">
-      <input accept='image/*' id="icon-button-file" type="file"
-        capture="environment" />
+      <label>Capture an Image: 
+      </label>
+      <button onClick={camera.takeSnapshot()}> Capture Image </button>
+      {/* <input accept='image/*' id="icon-button-file" type="file"
+        capture="environment" /> */}
+        
     </div>
   );
 }
