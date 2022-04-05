@@ -18,7 +18,8 @@ function App() {
         
         {/*output element for the image uploaded*/} 
         <p><img id="output" width="200"/></p>
-
+        
+        {/* upload box for the files, presented the option of using the main camera or the file explorer */}
         <input type="file" accept='image/*' name='image' id='file' onChange={loadFile} />
     </div>
   );
