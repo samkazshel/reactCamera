@@ -2,14 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Qr from './QR';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+window.addEventListener("load", function() {
+
+  let camElement = React.createElement(App, {name: "App"});
+  const camContainer = document.getElementById("react-cam");
+  ReactDOM.render(camElement, camContainer);
+
+  // var Text = "1234456";
+  // let qrElement = React.createElement(Qr(Text), {name: "Qr"} );
+  // const qrContainer = document.getElementById("react-qr");
+  // ReactDOM.render(qrElement, qrContainer);
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Qr text = "https://itnext.io/react-jsx-rendering-4405d3a3d6c3"/>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('react-qr')
 );
 
 // If you want your app to work offline and load faster, you can change
