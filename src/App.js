@@ -8,9 +8,19 @@ function App() {
     image.src = URL.createObjectURL(event.target.files[0]);
   }
 
+  const hSubmit = function(event){
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+    const value = Object.fromEntries(data.entries());
+
+    console.log( { value });
+    
+    }
+
   return (
     <div className="App">
-      <form>
+      <form class ="form" id="seizureForm">
       {/* label for the page*/}
       <p><label for="file"> Take Image </label></p>
       {/* <input accept='image/*' id="icon-button-file" type="file"
@@ -25,13 +35,14 @@ function App() {
         <label>Seizure Details:  </label>
         <textarea name="seizure-content" rows="2" cols="20"></textarea>
         </p>
-        <p>
-          <input type = "submit" value = "Submit"/>
-        </p>
+        
         <p><img id="output" width="200"/></p>
         
         {/* upload box for the files, presented the option of using the main camera or the file explorer */}
         <input type="file" accept='image/*' name='image' id='file' onChange={loadFile} />
+        <p>
+          <input type = "submit" value = "Submit" onSubmit={hSubmit}/>
+        </p>
         </form>
     </div>
   );

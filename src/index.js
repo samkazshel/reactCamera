@@ -21,7 +21,7 @@ window.addEventListener("load", function() {
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Qr text = "https://itnext.io/react-jsx-rendering-4405d3a3d6c3"/>
+    <Qr text = "1235"/>
   </React.StrictMode>,
   document.getElementById('react-qr')
 );
