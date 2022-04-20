@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
   ReactDOM.render(camElement, camContainer);
 
   // var Text = "1234456";
-  // let qrElement = React.createElement(Qr(Text), {name: "Qr"} );
+  // let qrElement = React.createElement(Qr("123456"), {name: "Qr"} );
   // const qrContainer = document.getElementById("react-qr");
   // ReactDOM.render(qrElement, qrContainer);
 });
