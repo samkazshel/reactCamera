@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
-
+import Scan from './Scan';
+import { useState } from 'react';
+import {ActionsContext} from './context'; 
 function App() {
 
   var loadFile = function(event){
@@ -17,6 +19,15 @@ function App() {
     console.log( { value });
     
     }
+
+  const [actions, setActions] = useState(null);
+  const {scan, write} = actions || {};
+
+  const actionValue = {actions, setActions};
+
+  const onHandleAction = (actions) =>{
+    setActions({...actions})
+  }
 
   return (
     <div className="App">
@@ -44,6 +55,14 @@ function App() {
           <input type = "submit" value = "Submit" onSubmit={hSubmit}/>
         </p>
         </form>
+
+        <h1>NFC Scan</h1>
+        <div classname="App-container">
+          <button onClick={()=>onHandleAction({scan: 'scanning', write: null})} className="btn">Scan</button>
+        </div>
+        <ActionsContext.Provider value={actionValue}>
+          {scan && <Scan/>}
+        </ActionsContext.Provider>
     </div>
   );
 }
