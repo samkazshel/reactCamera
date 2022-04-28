@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Qr from './QR';
+import Scan from './Scan'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import nfc from './nfc';
 
 window.addEventListener("load", function() {
 
@@ -13,9 +13,9 @@ window.addEventListener("load", function() {
   const camContainer = document.getElementById("react-cam");
   ReactDOM.render(camElement, camContainer);
 
-  let nfcElement = React.createElement(nfc, {name: "nfc"});
-  const nfcContainer = document.getElementById("nfc");
-  ReactDOM.render(nfcElement, nfcContainer);
+  let scanElement = React.createElement(Scan, {name: "Scan"});
+  const scanContainer = document.getElementById("nfc");
+  ReactDOM.render(scanElement, scanContainer);
 
   // var Text = "1234456";
   // let qrElement = React.createElement(Qr("123456"), {name: "Qr"} );
