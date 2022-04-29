@@ -21,7 +21,7 @@ function App() {
     }
 
   const [actions, setActions] = useState(null);
-  const {scan, write} = actions || {};
+  const {scan} = actions || {};
 
   const actionValue = {actions, setActions};
 

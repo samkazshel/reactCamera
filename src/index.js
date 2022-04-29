@@ -8,9 +8,9 @@ import reportWebVitals from './reportWebVitals';
 
 window.addEventListener("load", function() {
 
-  let camElement = React.createElement(App, {name: "App"});
-  const camContainer = document.getElementById("react-cam");
-  ReactDOM.render(camElement, camContainer);
+  // let camElement = React.createElement(App, {name: "App"});
+  // const camContainer = document.getElementById("react-cam");
+  // ReactDOM.render(camElement, camContainer);
 
   // var Text = "1234456";
   // let qrElement = React.createElement(Qr("123456"), {name: "Qr"} );
@@ -20,7 +20,7 @@ window.addEventListener("load", function() {
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
+    <App />
     <Qr text = "1235"/>
   </React.StrictMode>,
   document.getElementById('react-qr')
